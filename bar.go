@@ -79,6 +79,10 @@ func (b *Bar) SetSpeedSection(fast, slow int) {
 	}
 }
 
+func (b *Bar) SetTotal(total int) {
+	b.total = total
+}
+
 func (b *Bar) Add(n ...int) {
 	b.mu.Lock()
 	defer b.mu.Unlock()
